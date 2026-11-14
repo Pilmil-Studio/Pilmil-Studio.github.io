@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pilmil Studio — Applications libres et 100 % hors-ligne</title>
+<meta name="description" content="Pilmil Studio développe des applications Android libres, gratuites, sans compte, sans publicité, sans traceur et 100 % hors-ligne.">
+<style>
+:root {
+  --bg: #111318;
+  --bg2: #1A1E26;
+  --fg: #F3F4F6;
+  --muted: #A3AAB8;
+  --line: #2C323F;
+  --accent: #F59E0B;
+  --card: rgba(255, 255, 255, 0.04);
+  --font: system-ui, -apple-system, 'Segoe UI', sans-serif;
+  color-scheme: dark;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #FAF8F4;
+    --bg2: #EFEAE0;
+    --fg: #181A1F;
+    --muted: #58606E;
+    --line: #DDD6C8;
+    --accent: #B45309;
+    --card: rgba(0, 0, 0, 0.03);
+    color-scheme: light;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font);
+  font-size: 17px;
+  line-height: 1.6;
+}
+a { color: inherit; }
+.wrap { max-width: 980px; margin: 0 auto; padding: 32px 20px 64px; }
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+.brand { font-size: 20px; font-weight: 700; text-decoration: none; }
+nav { display: flex; gap: 20px; font-size: 15px; color: var(--muted); }
+nav a { text-decoration: none; }
+nav a:hover { color: var(--fg); }
+.hero { padding: 44px 0 32px; }
+.kicker {
+  margin: 0 0 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+h1 { margin: 0 0 14px; font-size: clamp(28px, 4vw, 40px); line-height: 1.15; }
+.lead { margin: 0; max-width: 680px; color: var(--muted); }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 20px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.card h2 { margin: 0 0 6px; font-size: 20px; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.links { display: flex; gap: 14px; font-size: 14px; font-weight: 600; }
+.links a { text-decoration: none; color: var(--accent); }
+.links a:hover { text-decoration: underline; }
+footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <a class="brand" href="./">Pilmil Studio</a>
+    <nav aria-label="Liens">
+      <a href="https://github.com/Pilmil-Studio">GitHub</a>
+      <a href="mailto:pilmil.studio@proton.me">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="kicker">Logiciels libres · 100 % hors-ligne</p>
+      <h1>Des utilitaires sobres, sans compte ni collecte de données.</h1>
+      <p class="lead">Pilmil Studio conçoit des applications mobiles libres (MPL-2.0 / Apache-2.0) qui fonctionnent intégralement sur votre appareil : aucune permission réseau, aucun traceur, aucune publicité.</p>
+    </section>
+
+    <section aria-label="Applications">
+      <div class="grid">
+        <article class="card">
+          <div>
+            <h2>Sommelle</h2>
+            <p>Thérapie comportementale et cognitive de l'insomnie (TCC-I), agenda du sommeil et export PDF local.</p>
+          </div>
+          <div class="links">
+            <a href="https://pilmil-studio.github.io/sommelle/">Site</a>
+            <a href="https://github.com/Pilmil-Studio/sommelle">Code source</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>Lunaison</h2>
+            <p>Suivi du cycle menstruel chiffré localement par code PIN, sans compte ni synchronisation cloud.</p>
+          </div>
+          <div class="links">
+            <a href="https://pilmil-studio.github.io/lunaison/">Site</a>
+            <a href="https://github.com/Pilmil-Studio/lunaison">Code source</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>Respire</h2>
+            <p>Cohérence cardiaque et frein aux formats courts (Shorts, Reels) pour retrouver son attention.</p>
+          </div>
+          <div class="links">
+            <a href="https://pilmil-studio.github.io/respire/">Site</a>
+            <a href="https://github.com/Pilmil-Studio/respire">Code source</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>Sauve</h2>
+            <p>Guide de premiers secours anti-panique et métronome de réanimation cardio-pulmonaire hors-ligne.</p>
+          </div>
+          <div class="links">
+            <a href="https://pilmil-studio.github.io/sauve/">Site</a>
+            <a href="https://github.com/Pilmil-Studio/sauve">Code source</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>Sillon</h2>
+            <p>Calendrier de semis adapté aux gelées locales, gestion des parcelles et diagnostic potager embarqué.</p>
+          </div>
+          <div class="links">
+            <a href="https://pilmil-studio.github.io/sillon/">Site</a>
+            <a href="https://github.com/Pilmil-Studio/sillon">Code source</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <div>
+            <h2>Fredonne</h2>
+            <p>Bloc-notes mélodique à une voix au clavier virtuel, écoute immédiate et transposition d'instruments.</p>
+          </div>
+          <div class="links">
+            <a href="https://pilmil-studio.github.io/fredonne/">Site</a>
+            <a href="https://github.com/Pilmil-Studio/fredonne">Code source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>Pilmil Studio · Alfortville</span>
+    <span><a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a></span>
+  </footer>
+</div>
+</body>
+</html>
