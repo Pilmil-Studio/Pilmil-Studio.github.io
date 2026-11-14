@@ -3,528 +3,262 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pilmil Studio — Applications libres, éthiques et 100 % hors-ligne</title>
-<meta name="description" content="Pilmil Studio développe des applications Android libres, gratuites, sans compte, sans publicité, sans traceur et 100 % hors-ligne.">
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%236366F1'/%3E%3Cstop offset='100%25' stop-color='%23F59E0B'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M10 22V10h6.5a4.5 4.5 0 0 1 0 9H13' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
-<style>
-:root {
-  --bg: #090B10;
-  --surface: rgba(255, 255, 255, 0.04);
-  --surface-hover: rgba(255, 255, 255, 0.07);
-  --fg: #F8FAFC;
-  --muted: #94A3B8;
-  --line: rgba(255, 255, 255, 0.1);
-  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body {
-  margin: 0;
-  background-color: var(--bg);
-  background-image:
-    radial-gradient(65rem 42rem at 12% -8%, rgba(99, 102, 241, 0.24), transparent 60%),
-    radial-gradient(55rem 38rem at 88% 4%, rgba(245, 158, 11, 0.18), transparent 58%),
-    radial-gradient(50rem 36rem at 50% 55%, rgba(16, 185, 129, 0.10), transparent 62%);
-  background-repeat: no-repeat;
-  color: var(--fg);
-  font-family: var(--font);
-  font-size: 17px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-}
-a { color: inherit; }
-.wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
-
-/* Header */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 24px 0;
-  border-bottom: 1px solid var(--line);
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 19px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  text-decoration: none;
-}
-.brand-mark {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #6366F1 0%, #EC4899 52%, #F59E0B 100%);
-  display: grid;
-  place-items: center;
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
-}
-nav { display: flex; align-items: center; gap: 24px; font-size: 15px; color: var(--muted); }
-nav a { text-decoration: none; transition: color 0.15s ease; }
-nav a:hover { color: var(--fg); }
-
-/* Hero */
-.hero {
-  padding: 80px 0 56px;
-  text-align: center;
-}
-.badge-row {
-  display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 24px;
-}
-.pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 13px;
-  font-weight: 600;
-  color: #E2E8F0;
-  backdrop-filter: blur(8px);
-}
-.pill .dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #34D399;
-  box-shadow: 0 0 10px #34D399;
-}
-h1 {
-  margin: 0 auto 20px;
-  max-width: 820px;
-  font-size: clamp(36px, 5.5vw, 62px);
-  font-weight: 800;
-  line-height: 1.07;
-  letter-spacing: -0.03em;
-  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 45%, #FDE68A 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.lead {
-  margin: 0 auto 36px;
-  max-width: 660px;
-  font-size: 19px;
-  color: var(--muted);
-}
-.cta-row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 14px;
-}
-.btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 13px 24px;
-  border-radius: 12px;
-  font-size: 15px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-}
-.btn-primary {
-  background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);
-  color: #FFFFFF;
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.35);
-}
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 36px rgba(99, 102, 241, 0.45);
-}
-.btn-secondary {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid var(--line);
-  color: var(--fg);
-}
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.10);
-  transform: translateY(-2px);
-}
-
-/* Pillars */
-.pillars {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
-  margin: 24px 0 64px;
-}
-.pillar {
-  padding: 20px 22px;
-  border-radius: 16px;
-  background: var(--surface);
-  border: 1px solid var(--line);
-}
-.pillar strong {
-  display: block;
-  margin-bottom: 4px;
-  font-size: 16px;
-  color: #FFFFFF;
-}
-.pillar span {
-  font-size: 14px;
-  color: var(--muted);
-}
-
-/* Section heading */
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 24px;
-}
-.section-head h2 {
-  margin: 0;
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-.section-head p {
-  margin: 0;
-  font-size: 15px;
-  color: var(--muted);
-}
-
-/* Apps Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
-  gap: 20px;
-}
-.card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 26px;
-  border-radius: 20px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055) 0%, rgba(255, 255, 255, 0.025) 100%);
-  border: 1px solid var(--line);
-  overflow: hidden;
-  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
-}
-.card::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--c1), var(--c2));
-}
-.card::after {
-  content: "";
-  position: absolute;
-  top: -60px;
-  right: -60px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--glow) 0%, transparent 70%);
-  pointer-events: none;
-}
-.card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(255, 255, 255, 0.22);
-  box-shadow: 0 20px 44px rgba(0, 0, 0, 0.45);
-}
-.card-top {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 12px;
-}
-.app-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 13px;
-  background: linear-gradient(135deg, var(--c1), var(--c2));
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-  box-shadow: 0 8px 20px var(--glow);
-}
-.card-title-wrap h3 {
-  margin: 0;
-  font-size: 21px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-.tag {
-  font-size: 12px;
-  font-weight: 600;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-.card p {
-  margin: 0;
-  font-size: 15px;
-  color: #CBD5E1;
-}
-.card-actions {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-top: 6px;
-}
-.link-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 8px 14px;
-  border-radius: 10px;
-  font-size: 13.5px;
-  font-weight: 600;
-  text-decoration: none;
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: background 0.15s ease;
-}
-.link-pill:hover {
-  background: rgba(255, 255, 255, 0.14);
-}
-.link-ghost {
-  font-size: 13.5px;
-  font-weight: 500;
-  color: var(--muted);
-  text-decoration: none;
-  padding: 8px 4px;
-}
-.link-ghost:hover { color: #FFFFFF; }
-
-/* App palettes */
-.t-sommelle { --c1: #4F46E5; --c2: #818CF8; --glow: rgba(99, 102, 241, 0.25); }
-.t-lunaison { --c1: #9333EA; --c2: #EC4899; --glow: rgba(217, 70, 239, 0.22); }
-.t-respire  { --c1: #059669; --c2: #34D399; --glow: rgba(16, 185, 129, 0.22); }
-.t-sauve    { --c1: #DC2626; --c2: #F97316; --glow: rgba(239, 68, 68, 0.24); }
-.t-sillon   { --c1: #16A34A; --c2: #84CC16; --glow: rgba(34, 197, 94, 0.22); }
-.t-fredonne { --c1: #D97706; --c2: #FBBF24; --glow: rgba(245, 158, 11, 0.24); }
-
-/* Footer */
-footer {
-  margin-top: 84px;
-  padding: 28px 0 48px;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  font-size: 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-footer a { text-decoration: none; }
-footer a:hover { color: var(--fg); }
-
-@media (max-width: 600px) {
-  .hero { padding: 52px 0 36px; }
-  nav { gap: 16px; }
-}
-</style>
+<title>Pilmil Studio · Applis Android libres et hors-ligne</title>
+<meta name="description" content="Des applis Android gratuites et libres, sans pub ni collecte de données, conçues à partir de ce que dit la recherche : Respire, Sommelle, Lunaison, Sillon, Sauve et Fredonne.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Pilmil Studio · Applis Android libres et hors-ligne">
+<meta property="og:description" content="Six applis Android gratuites et libres, sans pub ni collecte de données.">
+<link rel="alternate" hreflang="en" href="en/">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0%25' stop-color='%234F8467'/%3E%3Cstop offset='50%25' stop-color='%233D4C97'/%3E%3Cstop offset='100%25' stop-color='%23D97706'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='8' fill='url(%23g)'/%3E%3Cpath d='M10 22V10h6.5a4.5 4.5 0 0 1 0 9H13' fill='none' stroke='%23fff' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="css/home.css">
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <a class="brand" href="./">
-      <span class="brand-mark" aria-hidden="true">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M6 20V5h7a5 5 0 0 1 0 10H6"/>
+<header class="wrap top">
+  <a class="mark" href="./">Pilmil Studio</a>
+  <a class="gh" href="en/" lang="en">English</a>
+</header>
+
+<main id="haut">
+  <section class="wrap hero">
+    <p class="kicker">Pilmil Studio · Applis Android</p>
+    <h1>Six applis qui ne vous demandent <span class="grad">rien</span>.</h1>
+    <p class="lead">Respirer, dormir, comprendre son cycle, jardiner, porter secours, écrire une mélodie. Des outils pour le quotidien, gratuits, libres, sans compte et sans publicité. Elles n'ont même pas le droit d'utiliser Internet.</p>
+    <ul class="pebbles">
+      <li><a href="#respire" style="--c: var(--respire)"><i></i>Respire</a></li>
+      <li><a href="#sommelle" style="--c: var(--sommelle)"><i></i>Sommelle</a></li>
+      <li><a href="#lunaison" style="--c: var(--lunaison)"><i></i>Lunaison</a></li>
+      <li><a href="#sillon" style="--c: var(--sillon)"><i></i>Sillon</a></li>
+      <li><a href="#sauve" style="--c: var(--sauve)"><i></i>Sauve</a></li>
+      <li><a href="#fredonne" style="--c: var(--fredonne)"><i></i>Fredonne</a></li>
+    </ul>
+  </section>
+
+  <section class="wrap rules" aria-labelledby="rules-title">
+    <h2 id="rules-title">Ce qu'elles ne font jamais</h2>
+    <ul class="rule-list">
+      <li><strong>Aucun compte</strong><span>Vous ouvrez l'appli, elle fonctionne.</span></li>
+      <li><strong>Aucune publicité</strong><span>Ni bannière, ni achat intégré.</span></li>
+      <li><strong>Aucun traceur</strong><span>Rien ne mesure ce que vous faites.</span></li>
+      <li><strong>Aucun accès à Internet</strong><span>Vos données restent sur votre téléphone.</span></li>
+      <li><strong>Aucun prix</strong><span>Gratuites, avec un code libre sous licence MPL-2.0.</span></li>
+    </ul>
+  </section>
+
+  <section class="wrap apps" aria-label="Les six applis">
+
+    <article class="app" id="respire">
+      <div class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <circle class="breath b1 a-fill" cx="100" cy="100" r="86" fill-opacity="0.16"/>
+          <circle class="breath b2 a-fill" cx="100" cy="100" r="60" fill-opacity="0.3"/>
+          <circle class="breath b3 a-fill" cx="100" cy="100" r="34" fill-opacity="0.7"/>
         </svg>
-      </span>
-      Pilmil Studio
-    </a>
-    <nav aria-label="Navigation">
-      <a href="#applications">Applications</a>
-      <a href="https://github.com/pilmil-studio">GitHub</a>
-      <a href="mailto:pilmil.studio@proton.me">Contact</a>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="badge-row">
-        <span class="pill"><span class="dot"></span> 100 % hors-ligne</span>
-        <span class="pill">Sans compte · Zéro traceur</span>
-        <span class="pill">Code source libre</span>
       </div>
-      <h1>Des applications utiles, sobres et souveraines.</h1>
-      <p class="lead">Pilmil Studio conçoit des outils du quotidien gratuits, sans publicité et sans permission réseau. Vos données restent sur votre téléphone, sous votre contrôle.</p>
-      <div class="cta-row">
-        <a class="btn btn-primary" href="#applications">Découvrir les applications</a>
-        <a class="btn btn-secondary" href="https://github.com/pilmil-studio">Explorer sur GitHub</a>
-      </div>
-    </section>
-
-    <section class="pillars" aria-label="Principes">
-      <div class="pillar">
-        <strong>Zéro connexion requise</strong>
-        <span>Aucune permission Internet, aucun serveur distant, aucun abonnement caché.</span>
-      </div>
-      <div class="pillar">
-        <strong>Formats ouverts &amp; export local</strong>
-        <span>Vos historiques et créations s'exportent librement (PDF, MIDI, MusicXML, sauvegardes chiffrées).</span>
-      </div>
-      <div class="pillar">
-        <strong>Code ouvert &amp; vérifiable</strong>
-        <span>Publiées sous licences libres MPL-2.0 et Apache-2.0, sans SDK publicitaire ni télémétrie.</span>
-      </div>
-    </section>
-
-    <section id="applications" aria-label="Catalogue d'applications">
-      <div class="section-head">
-        <h2>Nos applications</h2>
-        <p>Six outils spécialisés, conçus pour fonctionner sans nuage.</p>
-      </div>
-
-      <div class="grid">
-        <article class="card t-sommelle">
+      <div class="copy">
+        <div class="app-head">
+          <img class="app-logo" src="img/apps/respire.png" alt="Logo Respire" width="44" height="44">
           <div>
-            <div class="card-top">
-              <div class="app-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                </svg>
-              </div>
-              <div class="card-title-wrap">
-                <h3>Sommelle</h3>
-                <span class="tag">Sommeil · TCC-I</span>
-              </div>
-            </div>
-            <p>Thérapie comportementale et cognitive de l'insomnie : agenda du sommeil, fenêtre de restriction et export PDF pour le suivi médical.</p>
+            <span class="tag">Bien-être numérique</span>
+            <h3>Respire</h3>
           </div>
-          <div class="card-actions">
-            <a class="link-pill" href="https://pilmil-studio.github.io/sommelle/">Découvrir</a>
-            <a class="link-ghost" href="https://github.com/pilmil-studio/sommelle">Code source</a>
-          </div>
-        </article>
-
-        <article class="card t-lunaison">
-          <div>
-            <div class="card-top">
-              <div class="app-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="9"/>
-                  <path d="M12 3a9 9 0 0 0 0 18"/>
-                </svg>
-              </div>
-              <div class="card-title-wrap">
-                <h3>Lunaison</h3>
-                <span class="tag">Cycle menstruel</span>
-              </div>
-            </div>
-            <p>Suivi intime du cycle chiffré localement par code PIN, repères cliniques sourçés et transfert pair-à-pair sans cloud.</p>
-          </div>
-          <div class="card-actions">
-            <a class="link-pill" href="https://pilmil-studio.github.io/lunaison/">Découvrir</a>
-            <a class="link-ghost" href="https://github.com/pilmil-studio/lunaison">Code source</a>
-          </div>
-        </article>
-
-        <article class="card t-respire">
-          <div>
-            <div class="card-top">
-              <div class="app-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 22c4-4 7-7.5 7-12a7 7 0 1 0-14 0c0 4.5 3 8 7 12z"/>
-                </svg>
-              </div>
-              <div class="card-title-wrap">
-                <h3>Respire</h3>
-                <span class="tag">Attention · Anti-scroll</span>
-              </div>
-            </div>
-            <p>Cohérence cardiaque et frein aux formats courts (Shorts, Reels) pour reprendre le contrôle sur ses ouvertures d'applications.</p>
-          </div>
-          <div class="card-actions">
-            <a class="link-pill" href="https://pilmil-studio.github.io/respire/">Découvrir</a>
-            <a class="link-ghost" href="https://github.com/pilmil-studio/respire">Code source</a>
-          </div>
-        </article>
-
-        <article class="card t-sauve">
-          <div>
-            <div class="card-top">
-              <div class="app-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M12 5v14M5 12h14"/>
-                </svg>
-              </div>
-              <div class="card-title-wrap">
-                <h3>Sauve</h3>
-                <span class="tag">Premiers secours</span>
-              </div>
-            </div>
-            <p>Gestes d'urgence vitale guidés pas à pas, appel direct aux secours et métronome de réanimation cardio-pulmonaire hors-ligne.</p>
-          </div>
-          <div class="card-actions">
-            <a class="link-pill" href="https://pilmil-studio.github.io/sauve/">Découvrir</a>
-            <a class="link-ghost" href="https://github.com/pilmil-studio/sauve">Code source</a>
-          </div>
-        </article>
-
-        <article class="card t-sillon">
-          <div>
-            <div class="card-top">
-              <div class="app-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M7 20h10M12 20V9m0 0C12 5 16 4 19 4c0 4-2 7-7 5zm0 3c-5 2-7-1-7-5 3 0 7 1 7 5z"/>
-                </svg>
-              </div>
-              <div class="card-title-wrap">
-                <h3>Sillon</h3>
-                <span class="tag">Potager · Agronomie</span>
-              </div>
-            </div>
-            <p>Calendrier de semis calé sur les gelées de votre département, suivi des parcelles et diagnostic foliaire embarqué.</p>
-          </div>
-          <div class="card-actions">
-            <a class="link-pill" href="https://pilmil-studio.github.io/sillon/">Découvrir</a>
-            <a class="link-ghost" href="https://github.com/pilmil-studio/sillon">Code source</a>
-          </div>
-        </article>
-
-        <article class="card t-fredonne">
-          <div>
-            <div class="card-top">
-              <div class="app-icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111318" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M9 18V5l10-2v13"/>
-                  <circle cx="6.5" cy="18" r="2.5" fill="#111318"/>
-                  <circle cx="16.5" cy="16" r="2.5" fill="#111318"/>
-                </svg>
-              </div>
-              <div class="card-title-wrap">
-                <h3>Fredonne</h3>
-                <span class="tag">Musique · Solfège</span>
-              </div>
-            </div>
-            <p>Bloc-notes mélodique au clavier virtuel, écoute immédiate, transposition (Si♭, Mi♭, Fa) et export MusicXML, MIDI et PDF.</p>
-          </div>
-          <div class="card-actions">
-            <a class="link-pill" href="https://pilmil-studio.github.io/fredonne/">Découvrir</a>
-            <a class="link-ghost" href="https://github.com/pilmil-studio/fredonne">Code source</a>
-          </div>
-        </article>
+        </div>
+        <p class="promise">Une respiration avant le scroll sans fin.</p>
+        <p class="detail">Avant d'ouvrir une appli qui vous aspire, Respire vous offre une pause. Vous gardez la main sur votre temps.</p>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/respire/fr/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/pilmil-studio/respire">Le code <span aria-hidden="true">→</span></a></div>
       </div>
-    </section>
-  </main>
+    </article>
 
-  <footer>
-    <span>Pilmil Studio · Logiciels libres et indépendants</span>
-    <span><a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a></span>
-  </footer>
-</div>
+    <article class="app" id="sommelle">
+      <div class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <mask id="m-som"><rect width="200" height="200" fill="#fff"/><circle cx="128" cy="80" r="54" fill="#000"/></mask>
+          <circle class="a-fill" cx="98" cy="108" r="64" mask="url(#m-som)"/>
+          <circle class="a-fill" cx="150" cy="46" r="4"/>
+          <circle class="a-fill" cx="172" cy="88" r="3" fill-opacity="0.7"/>
+          <circle class="a-fill" cx="124" cy="26" r="2.5" fill-opacity="0.6"/>
+          <circle class="a-fill" cx="176" cy="132" r="2.5" fill-opacity="0.5"/>
+        </svg>
+      </div>
+      <div class="copy">
+        <div class="app-head">
+          <img class="app-logo" src="img/apps/sommelle.png" alt="Logo Sommelle" width="44" height="44">
+          <div>
+            <span class="tag">Sommeil</span>
+            <h3>Sommelle</h3>
+          </div>
+        </div>
+        <p class="promise">Retrouver le sommeil, semaine après semaine.</p>
+        <p class="detail">Un accompagnement inspiré de la thérapie cognitive et comportementale de l'insomnie : agenda du sommeil, bilans, aide pour les nuits difficiles. Un outil d'accompagnement pour adultes, pas un dispositif médical.</p>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/sommelle/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/pilmil-studio/sommelle">Le code <span aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+    <article class="app" id="lunaison">
+      <div class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <mask id="m-lu"><rect width="200" height="200" fill="#fff"/><circle cx="53" cy="100" r="15" fill="#000"/></mask>
+          <circle class="a-stroke" cx="24" cy="100" r="15" stroke-width="2.5"/>
+          <circle class="a-stroke" cx="62" cy="100" r="15" stroke-width="2.5"/>
+          <circle class="a-fill" cx="62" cy="100" r="15" mask="url(#m-lu)"/>
+          <circle class="a-stroke" cx="100" cy="100" r="15" stroke-width="2.5"/>
+          <path class="a-fill" d="M100 85 A15 15 0 0 1 100 115 Z"/>
+          <circle class="a-stroke" cx="138" cy="100" r="15" stroke-width="2.5"/>
+          <path class="a-fill" d="M138 85 A15 15 0 0 1 138 115 Z"/>
+          <ellipse class="a-fill" cx="138" cy="100" rx="8" ry="15"/>
+          <circle class="a-fill" cx="176" cy="100" r="15"/>
+        </svg>
+      </div>
+      <div class="copy">
+        <div class="app-head">
+          <img class="app-logo" src="img/apps/lunaison.png" alt="Logo Lunaison" width="44" height="44">
+          <div>
+            <span class="tag">Santé</span>
+            <h3>Lunaison</h3>
+          </div>
+        </div>
+        <p class="promise">Votre cycle, rien que pour vous.</p>
+        <p class="detail">Suivi du cycle, prévisions et conseils selon la phase. Tout reste sur le téléphone. Pour les 13 ans et plus, sans prétendre être une méthode de contraception.</p>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/lunaison/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/pilmil-studio/lunaison">Le code <span aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+    <article class="app" id="sillon">
+      <div class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <rect class="a-fill" x="20" y="20" width="48" height="48" rx="9" fill-opacity="0.16"/>
+          <circle class="a-fill" cx="33" cy="33" r="5.5"/>
+          <circle class="a-fill" cx="33" cy="55" r="5.5"/>
+          <circle class="a-fill" cx="55" cy="33" r="5.5"/>
+          <circle class="a-fill" cx="55" cy="55" r="5.5"/>
+          <rect class="a-fill" x="78" y="20" width="48" height="48" rx="9" fill-opacity="0.16"/>
+          <circle class="a-fill" cx="102" cy="44" r="11"/>
+          <rect class="a-fill" x="136" y="20" width="48" height="48" rx="9" fill-opacity="0.16"/>
+          <rect class="a-fill" x="20" y="78" width="48" height="48" rx="9" fill-opacity="0.16"/>
+          <circle class="a-fill" cx="30" cy="88" r="3.4"/>
+          <circle class="a-fill" cx="30" cy="102" r="3.4"/>
+          <circle class="a-fill" cx="30" cy="116" r="3.4"/>
+          <circle class="a-fill" cx="44" cy="88" r="3.4"/>
+          <circle class="a-fill" cx="44" cy="102" r="3.4"/>
+          <circle class="a-fill" cx="44" cy="116" r="3.4"/>
+          <circle class="a-fill" cx="58" cy="88" r="3.4"/>
+          <circle class="a-fill" cx="58" cy="102" r="3.4"/>
+          <circle class="a-fill" cx="58" cy="116" r="3.4"/>
+          <rect class="a-fill" x="78" y="78" width="48" height="48" rx="9" fill-opacity="0.16"/>
+          <circle class="a-fill" cx="91" cy="91" r="5.5"/>
+          <circle class="a-fill" cx="91" cy="113" r="5.5"/>
+          <circle class="a-fill" cx="113" cy="91" r="5.5"/>
+          <circle class="a-fill" cx="113" cy="113" r="5.5"/>
+          <rect class="a-fill" x="136" y="78" width="48" height="48" rx="9" fill-opacity="0.16"/>
+          <circle class="a-fill" cx="160" cy="102" r="11"/>
+          <rect class="a-fill" x="20" y="136" width="48" height="48" rx="9" fill-opacity="0.16"/>
+          <circle class="a-fill" cx="44" cy="160" r="11"/>
+          <rect class="a-fill" x="78" y="136" width="48" height="48" rx="9" fill-opacity="0.16"/>
+          <rect class="a-fill" x="136" y="136" width="48" height="48" rx="9" fill-opacity="0.16"/>
+          <circle class="a-fill" cx="149" cy="149" r="5.5"/>
+          <circle class="a-fill" cx="149" cy="171" r="5.5"/>
+          <circle class="a-fill" cx="171" cy="149" r="5.5"/>
+          <circle class="a-fill" cx="171" cy="171" r="5.5"/>
+        </svg>
+      </div>
+      <div class="copy">
+        <div class="app-head">
+          <img class="app-logo" src="img/apps/sillon.png" alt="Logo Sillon" width="44" height="44">
+          <div>
+            <span class="tag">Jardin</span>
+            <h3>Sillon</h3>
+          </div>
+        </div>
+        <p class="promise">Un potager qui suit votre climat.</p>
+        <p class="detail">Un calendrier de semis calé sur les dernières gelées de votre département, des associations de plantes et une rotation des cultures. Hors-ligne, jusqu'au fond du jardin.</p>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/sillon/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/pilmil-studio/sillon">Le code <span aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+    <article class="app" id="sauve">
+      <div class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <circle class="a-stroke" cx="100" cy="100" r="86" stroke-width="3" stroke-opacity="0.3"/>
+          <path class="a-stroke" d="M16 100 H58 L72 100 L84 62 L100 148 L114 44 L128 108 L138 100 H184" stroke-opacity="0.25" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+          <path class="a-stroke pulse" pathLength="100" d="M16 100 H58 L72 100 L84 62 L100 148 L114 44 L128 108 L138 100 H184" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="copy">
+        <div class="app-head">
+          <img class="app-logo" src="img/apps/sauve.png" alt="Logo Sauve" width="44" height="44">
+          <div>
+            <span class="tag">Secours</span>
+            <h3>Sauve</h3>
+          </div>
+        </div>
+        <p class="promise">Les bons gestes, même quand la panique s'installe.</p>
+        <p class="detail">Arrêt cardiaque, étouffement, hémorragie : un guidage vocal et des vibrations, mains libres, qui s'ouvre en un instant et sans réseau.</p>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/sauve/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/pilmil-studio/sauve">Le code <span aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+    <article class="app" id="fredonne">
+      <div class="glyph" aria-hidden="true">
+        <svg viewBox="0 0 200 200" role="presentation">
+          <path class="a-stroke" d="M16 64 H184 M16 84 H184 M16 104 H184 M16 124 H184 M16 144 H184" stroke-width="2.5" stroke-opacity="0.35"/>
+          <ellipse class="a-fill" cx="54" cy="134" rx="13" ry="9.5" transform="rotate(-20 54 134)"/>
+          <path class="a-stroke" d="M66 130 V66" stroke-width="4" stroke-linecap="round"/>
+          <ellipse class="a-fill" cx="100" cy="114" rx="13" ry="9.5" transform="rotate(-20 100 114)"/>
+          <path class="a-stroke" d="M112 110 V46" stroke-width="4" stroke-linecap="round"/>
+          <ellipse class="a-fill" cx="146" cy="94" rx="13" ry="9.5" transform="rotate(-20 146 94)"/>
+          <path class="a-stroke" d="M158 90 V30" stroke-width="4" stroke-linecap="round"/>
+          <path class="a-stroke" d="M112 46 L158 30" stroke-width="7" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="copy">
+        <div class="app-head">
+          <img class="app-logo" src="img/apps/fredonne.png" alt="Logo Fredonne" width="44" height="44">
+          <div>
+            <span class="tag">Musique</span>
+            <h3>Fredonne</h3>
+          </div>
+        </div>
+        <p class="promise">Une mélodie notée, écoutée et transposée.</p>
+        <p class="detail">Saisissez une mélodie à une voix sur une portée, écoutez-la aussitôt et transposez-la dans une autre tonalité ou pour un instrument en si bémol, mi bémol ou fa.</p>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/fredonne/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/pilmil-studio/fredonne">Le code <span aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+  </section>
+
+  <section class="wrap about" id="comprendre">
+    <h2>Comprendre le projet</h2>
+    <ul class="jump">
+      <li><a href="#pourquoi">Pourquoi ces applis</a></li>
+      <li><a href="#principes">Comment elles sont faites</a></li>
+      <li><a href="#open-source">Pourquoi en open source</a></li>
+      <li><a href="https://github.com/pilmil-studio">Tout le code sur GitHub</a></li>
+    </ul>
+
+    <h2 id="pourquoi">Pourquoi ces applis</h2>
+    <div class="prose">
+      <p>Chaque application part d'un besoin concret du quotidien : reprendre la main sur son temps d'écran, retrouver un meilleur sommeil lorsque l'accès à un accompagnement spécialisé est difficile, suivre son cycle en toute confidentialité, ou encore disposer d'outils fiables hors connexion. À chaque fois, des applications existaient déjà, mais leurs fonctions les plus utiles étaient payantes ou financées par les données de leurs utilisateurs.</p>
+      <p>Pilmil Studio part d'un principe simple : ce n'est pas à la personne qui veut mieux dormir, comprendre son corps ou préserver son attention de payer pour y arriver, ni de céder ses données les plus intimes.</p>
+    </div>
+
+    <h2 id="principes">Comment elles sont faites</h2>
+    <ul class="principles">
+      <li><h3>Fondées sur la recherche</h3><p>Chaque fonction s'appuie sur une étude ou sur un choix de conception assumé, et chaque site indique lequel, sources à l'appui.</p></li>
+      <li><h3>L'appli au strict nécessaire</h3><p>Pas de séries à tenir, pas de badges, pas de notifications pour vous retenir. Les explications sont sur le site, pas dans l'appli.</p></li>
+      <li><h3>Développement assisté &amp; vérifié</h3><p>Une partie du code est rédigée avec l'appui d'outils d'IA, puis relue, testée sur appareil réel et maintenue par l'équipe.</p></li>
+      <li><h3>Transparence et suivi</h3><p>Un bug, un souci de vie privée ou une source discutable : écrivez-nous ou ouvrez une demande sur GitHub pour obtenir une réponse directe.</p></li>
+    </ul>
+
+    <h2 id="open-source">Pourquoi en open source</h2>
+    <div class="prose">
+      <p>Une appli qui touche à la santé, au sommeil ou au cycle demande de la confiance. Le code ouvert permet de vérifier plutôt que de croire : chacun peut lire ce que l'appli fait de ses données, c'est-à-dire rien.</p>
+      <p>Il garantit aussi que ces outils restent disponibles dans la durée, et laisse la porte ouverte aux corrections, aux traductions et aux relectures, notamment par des professionnels de santé.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Contact : <a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a> · <a href="https://github.com/pilmil-studio">GitHub</a></p>
+  <p>Les applis de santé et de secours sont des outils d'information. Elles ne remplacent ni un professionnel de santé, ni une formation aux premiers secours.</p>
+</footer>
 </body>
 </html>
