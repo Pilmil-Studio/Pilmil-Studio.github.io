@@ -2,6 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url><loc>https://pilmil-studio.github.io/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://pilmil-studio.github.io/"/><xhtml:link rel="alternate" hreflang="en" href="https://pilmil-studio.github.io/en/"/></url>
   <url><loc>https://pilmil-studio.github.io/en/</loc><xhtml:link rel="alternate" hreflang="fr" href="https://pilmil-studio.github.io/"/><xhtml:link rel="alternate" hreflang="en" href="https://pilmil-studio.github.io/en/"/></url>
+  <url><loc>https://pilmil-studio.github.io/presse.html</loc><xhtml:link rel="alternate" hreflang="fr" href="https://pilmil-studio.github.io/presse.html"/><xhtml:link rel="alternate" hreflang="en" href="https://pilmil-studio.github.io/en/press.html"/></url>
+  <url><loc>https://pilmil-studio.github.io/en/press.html</loc><xhtml:link rel="alternate" hreflang="fr" href="https://pilmil-studio.github.io/presse.html"/><xhtml:link rel="alternate" hreflang="en" href="https://pilmil-studio.github.io/en/press.html"/></url>
   <url><loc>https://pilmil-studio.github.io/lunaison/</loc></url>
   <url><loc>https://pilmil-studio.github.io/lunaison/en/</loc></url>
   <url><loc>https://pilmil-studio.github.io/sommelle/</loc></url>

@@ -26,8 +26,9 @@
 <link rel="stylesheet" href="css/home.css">
 </head>
 <body>
+<a class="skip" href="#haut">Aller au contenu</a>
 <header class="wrap top">
-  <a class="mark" href="./" style="display:inline-flex;align-items:center;gap:10px;"><img src="img/pilmil-ilot.svg" alt="" width="28" height="28" style="display:block;">Pilmil Studio</a>
+  <a class="mark" href="./"><img src="img/pilmil-ilot.svg" alt="" width="28" height="28">Pilmil Studio</a>
   <a class="gh" href="en/" lang="en">English</a>
 </header>
 
@@ -36,15 +37,16 @@
     <p class="kicker">Pilmil Studio · Android &amp; iPhone (en développement)</p>
     <h1>Six applis qui ne vous demandent <span class="grad">rien</span>.</h1>
     <p class="lead">Respirer, dormir, comprendre son cycle, jardiner, porter secours, écrire une mélodie. Des outils pour le quotidien, gratuits, libres, sans compte et sans publicité. Elles n'ont même pas le droit d'utiliser Internet.</p>
-    <p class="lead" style="font-size:0.95rem;opacity:0.85;">Disponibles en APK sur GitHub ; version iPhone en développement et portage sur Google Play et l'App Store actuellement en phase de test.</p>
+    <p class="note">Disponibles en APK sur GitHub ; version iPhone en développement et portage sur Google Play et l'App Store actuellement en phase de test.</p>
     <ul class="pebbles">
-      <li><a href="#respire" style="--c: var(--respire)"><i></i>Respire</a></li>
-      <li><a href="#sommelle" style="--c: var(--sommelle)"><i></i>Sommelle</a></li>
-      <li><a href="#lunaison" style="--c: var(--lunaison)"><i></i>Lunaison</a></li>
-      <li><a href="#sillon" style="--c: var(--sillon)"><i></i>Sillon</a></li>
-      <li><a href="#sauve" style="--c: var(--sauve)"><i></i>Sauve</a></li>
-      <li><a href="#fredonne" style="--c: var(--fredonne)"><i></i>Fredonne</a></li>
+      <li><a href="#respire"><i></i>Respire</a></li>
+      <li><a href="#sommelle"><i></i>Sommelle</a></li>
+      <li><a href="#lunaison"><i></i>Lunaison</a></li>
+      <li><a href="#sillon"><i></i>Sillon</a></li>
+      <li><a href="#sauve"><i></i>Sauve</a></li>
+      <li><a href="#fredonne"><i></i>Fredonne</a></li>
     </ul>
+    <div class="cta"><a class="btn" href="#applis">Voir les six applis</a> <a class="btn alt" href="presse.html">Dossier de presse</a></div>
   </section>
 
   <section class="wrap rules" aria-labelledby="rules-title">
@@ -58,7 +60,7 @@
     </ul>
   </section>
 
-  <section class="wrap apps" aria-label="Les six applis">
+  <section class="wrap apps" id="applis" aria-label="Les six applis">
 
     <article class="app" id="respire">
       <div class="glyph" aria-hidden="true">
@@ -70,7 +72,7 @@
       </div>
       <div class="copy">
         <div class="app-head">
-          <img class="app-logo" src="img/apps/respire.png" alt="Logo Respire" width="44" height="44">
+          <img class="app-logo" src="img/apps/respire.png" alt="Logo Respire" width="512" height="512" loading="lazy" decoding="async">
           <div>
             <span class="tag">Bien-être numérique</span>
             <h3>Respire</h3>
@@ -78,7 +80,7 @@
         </div>
         <p class="promise">Une respiration avant le scroll sans fin.</p>
         <p class="detail">Avant d'ouvrir une appli qui vous aspire, Respire vous offre une pause. Vous gardez la main sur votre temps.</p>
-        <div class="links"><a class="go" href="https://pilmil-studio.github.io/respire/fr/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/respire">Le code <span aria-hidden="true">→</span></a></div>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/respire/fr/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/respire">Le code <span aria-hidden="true">→</span></a> <a class="go apk" href="https://github.com/Pilmil-Studio/respire/releases/latest">Télécharger l'APK</a></div>
       </div>
     </article>
 
@@ -95,7 +97,7 @@
       </div>
       <div class="copy">
         <div class="app-head">
-          <img class="app-logo" src="img/apps/sommelle.png" alt="Logo Sommelle" width="44" height="44">
+          <img class="app-logo" src="img/apps/sommelle.png" alt="Logo Sommelle" width="512" height="512" loading="lazy" decoding="async">
           <div>
             <span class="tag">Sommeil</span>
             <h3>Sommelle</h3>
@@ -103,7 +105,7 @@
         </div>
         <p class="promise">Retrouver le sommeil, semaine après semaine.</p>
         <p class="detail">Un accompagnement inspiré de la thérapie cognitive et comportementale de l'insomnie : agenda du sommeil, bilans, aide pour les nuits difficiles. Un outil d'accompagnement pour adultes, pas un dispositif médical.</p>
-        <div class="links"><a class="go" href="https://pilmil-studio.github.io/sommelle/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/sommelle">Le code <span aria-hidden="true">→</span></a></div>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/sommelle/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/sommelle">Le code <span aria-hidden="true">→</span></a> <a class="go apk" href="https://github.com/Pilmil-Studio/sommelle/releases/latest">Télécharger l'APK</a></div>
       </div>
     </article>
 
@@ -124,7 +126,7 @@
       </div>
       <div class="copy">
         <div class="app-head">
-          <img class="app-logo" src="img/apps/lunaison.png" alt="Logo Lunaison" width="44" height="44">
+          <img class="app-logo" src="img/apps/lunaison.png" alt="Logo Lunaison" width="512" height="512" loading="lazy" decoding="async">
           <div>
             <span class="tag">Santé</span>
             <h3>Lunaison</h3>
@@ -132,7 +134,7 @@
         </div>
         <p class="promise">Votre cycle, rien que pour vous.</p>
         <p class="detail">Suivi du cycle, prévisions et conseils selon la phase. Tout reste sur le téléphone. Pour les 13 ans et plus, sans prétendre être une méthode de contraception.</p>
-        <div class="links"><a class="go" href="https://pilmil-studio.github.io/lunaison/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/lunaison">Le code <span aria-hidden="true">→</span></a></div>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/lunaison/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/lunaison">Le code <span aria-hidden="true">→</span></a> <a class="go apk" href="https://github.com/Pilmil-Studio/lunaison/releases/latest">Télécharger l'APK</a></div>
       </div>
     </article>
 
@@ -176,7 +178,7 @@
       </div>
       <div class="copy">
         <div class="app-head">
-          <img class="app-logo" src="img/apps/sillon.png" alt="Logo Sillon" width="44" height="44">
+          <img class="app-logo" src="img/apps/sillon.png" alt="Logo Sillon" width="512" height="512" loading="lazy" decoding="async">
           <div>
             <span class="tag">Jardin</span>
             <h3>Sillon</h3>
@@ -184,7 +186,7 @@
         </div>
         <p class="promise">Un potager qui suit votre climat.</p>
         <p class="detail">Un calendrier de semis calé sur les dernières gelées de votre département, des associations de plantes et une rotation des cultures. Hors-ligne, jusqu'au fond du jardin.</p>
-        <div class="links"><a class="go" href="https://pilmil-studio.github.io/sillon/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/sillon">Le code <span aria-hidden="true">→</span></a></div>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/sillon/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/sillon">Le code <span aria-hidden="true">→</span></a> <a class="go apk" href="https://github.com/Pilmil-Studio/sillon/releases/latest">Télécharger l'APK</a></div>
       </div>
     </article>
 
@@ -198,7 +200,7 @@
       </div>
       <div class="copy">
         <div class="app-head">
-          <img class="app-logo" src="img/apps/sauve.png" alt="Logo Sauve" width="44" height="44">
+          <img class="app-logo" src="img/apps/sauve.png" alt="Logo Sauve" width="512" height="512" loading="lazy" decoding="async">
           <div>
             <span class="tag">Secours</span>
             <h3>Sauve</h3>
@@ -206,7 +208,7 @@
         </div>
         <p class="promise">Les bons gestes, même quand la panique s'installe.</p>
         <p class="detail">Arrêt cardiaque, étouffement, hémorragie : un guidage vocal et des vibrations, mains libres, qui s'ouvre en un instant et sans réseau.</p>
-        <div class="links"><a class="go" href="https://pilmil-studio.github.io/sauve/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/sauve">Le code <span aria-hidden="true">→</span></a></div>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/sauve/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/sauve">Le code <span aria-hidden="true">→</span></a> <a class="go apk" href="https://github.com/Pilmil-Studio/sauve/releases/latest">Télécharger l'APK</a></div>
       </div>
     </article>
 
@@ -225,7 +227,7 @@
       </div>
       <div class="copy">
         <div class="app-head">
-          <img class="app-logo" src="img/apps/fredonne.png" alt="Logo Fredonne" width="44" height="44">
+          <img class="app-logo" src="img/apps/fredonne.png" alt="Logo Fredonne" width="512" height="512" loading="lazy" decoding="async">
           <div>
             <span class="tag">Musique</span>
             <h3>Fredonne</h3>
@@ -233,7 +235,7 @@
         </div>
         <p class="promise">Une mélodie notée, écoutée et transposée.</p>
         <p class="detail">Saisissez une mélodie à une voix sur une portée, écoutez-la aussitôt et transposez-la dans une autre tonalité ou pour un instrument en si bémol, mi bémol ou fa.</p>
-        <div class="links"><a class="go" href="https://pilmil-studio.github.io/fredonne/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/fredonne">Le code <span aria-hidden="true">→</span></a></div>
+        <div class="links"><a class="go" href="https://pilmil-studio.github.io/fredonne/">Le site <span aria-hidden="true">→</span></a> <a class="go" href="https://github.com/Pilmil-Studio/fredonne">Le code <span aria-hidden="true">→</span></a> <a class="go apk" href="https://github.com/Pilmil-Studio/fredonne/releases/latest">Télécharger l'APK</a></div>
       </div>
     </article>
 
@@ -258,7 +260,7 @@
     <ul class="principles">
       <li><h3>Fondées sur la recherche</h3><p>Chaque fonction s'appuie sur une étude ou sur un choix de conception assumé, et chaque site indique lequel, sources à l'appui.</p></li>
       <li><h3>L'appli au strict nécessaire</h3><p>Pas de séries à tenir, pas de badges, pas de notifications pour vous retenir. Les explications sont sur le site, pas dans l'appli.</p></li>
-      <li><h3>Développement assisté &amp; vérifié</h3><p>Une partie du code est rédigée avec l'appui d'outils d'IA, puis relue, testée sur appareil réel et maintenue par l'équipe.</p></li>
+      <li><h3>Développement assisté &amp; vérifié</h3><p>Une partie du code est rédigée avec l'appui d'outils d'IA, puis relue, testée sur appareil réel et maintenue par les membres de l'association.</p></li>
       <li><h3>Transparence et suivi</h3><p>Un bug, un souci de vie privée ou une source discutable : écrivez-nous ou ouvrez une demande sur GitHub pour obtenir une réponse directe.</p></li>
     </ul>
 
@@ -271,8 +273,8 @@
 </main>
 
 <footer class="wrap foot">
-  <p>Contact : <a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a> · <a href="https://github.com/Pilmil-Studio">GitHub</a></p>
-  <p>Les applis de santé et de secours sont des outils d'information. Elles ne remplacent ni un professionnel de santé, ni une formation aux premiers secours.</p>
+  <p class="foot-links"><span>Contact : <a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a></span> <a href="https://github.com/Pilmil-Studio">GitHub</a> <a href="presse.html">Presse</a></p>
+  <p class="warn">Les applis de santé et de secours sont des outils d'information. Elles ne remplacent ni un professionnel de santé, ni une formation aux premiers secours.</p>
 </footer>
 </body>
 </html>
