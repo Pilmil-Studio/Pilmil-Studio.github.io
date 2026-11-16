@@ -25,8 +25,9 @@
 <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
+<a class="skip" href="#top">Skip to content</a>
 <header class="wrap top">
-  <a class="mark" href="./" style="display:inline-flex;align-items:center;gap:10px;"><img src="../img/pilmil-ilot.svg" alt="" width="28" height="28" style="display:block;">Pilmil Studio</a>
+  <a class="mark" href="./"><img src="../img/pilmil-ilot.svg" alt="" width="28" height="28">Pilmil Studio</a>
   <a class="gh" href="../presse.html" lang="fr">Français</a>
 </header>
 
@@ -37,72 +38,103 @@
     <p class="lead">Pilmil Studio publishes six free, open-source apps for Android, under the MPL-2.0 licence. They work without an account, without trackers and without permission to access the Internet. Each feature rests on published research or on a stated design choice, and each website says which.</p>
   </section>
 
-  <section class="wrap about" aria-labelledby="apps-title">
-    <h2 id="chiffres-title">In figures</h2>
-    <ul class="rule-list">
+  <nav class="wrap toc" aria-label="Contents">
+    <ul>
+      <li><a href="#chiffres">In figures</a></li>
+      <li><a href="#applis">The six apps</a></li>
+      <li><a href="#disponibilite">Availability</a></li>
+      <li><a href="#visuels">Visuals</a></li>
+      <li><a href="#faq">Frequently asked questions</a></li>
+      <li><a href="#citer">Short text to quote</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#fabrication">How they are made</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrap press">
+    <section class="sec" id="chiffres" aria-labelledby="chiffres-titre">
+        <h2 id="chiffres-titre">In figures</h2>
+    <ul class="stats">
       <li><strong>6</strong><span>apps described in this kit</span></li>
       <li><strong>MPL-2.0</strong><span>licence of each app's code</span></li>
       <li><strong>0</strong><span>apps that declare the Internet access permission in their configuration file</span></li>
       <li><strong>6</strong><span>languages for Respire, Sommelle and Lunaison (fr, en, de, es, pl, uk)</span></li>
       <li><strong>2</strong><span>languages for Sillon and Sauve (fr, en)</span></li>
     </ul>
+    </section>
 
-    <h2 id="apps-title">The six apps</h2>
-    <ul class="principles">
-      <li>
-        <h3>Respire</h3>
+    <section class="sec" id="applis" aria-labelledby="applis-titre">
+        <h2 id="applis-titre">The six apps</h2>
+    <ul class="cards">
+      <li class="card c-respire">
+        <div class="card-head"><img src="../img/apps/respire.png" alt="" width="512" height="512" loading="lazy" decoding="async"><h3>Respire</h3></div>
         <p><strong>What it is for:</strong> it puts a breathing pause in front of the apps you open without thinking, then leaves you free to open them or close them.</p>
         <p><strong>What it rests on:</strong> "Each feature rests on a study of smartphone overuse or on a stated design choice."</p>
         <p><strong>Category:</strong> digital well-being.</p>
-        <p><a href="https://pilmil-studio.github.io/respire/">Website</a> · <a href="https://github.com/Pilmil-Studio/respire">Source code</a> · <a href="https://github.com/Pilmil-Studio/respire/releases/latest">APK</a></p>
+        <p class="card-links"><a href="https://pilmil-studio.github.io/respire/">Website</a> <a href="https://github.com/Pilmil-Studio/respire">Source code</a> <a href="https://github.com/Pilmil-Studio/respire/releases/latest">APK</a></p>
       </li>
-      <li>
-        <h3>Sommelle</h3>
+      <li class="card c-sommelle">
+        <div class="card-head"><img src="../img/apps/sommelle.png" alt="" width="512" height="512" loading="lazy" decoding="async"><h3>Sommelle</h3></div>
         <p><strong>What it is for:</strong> it supports you through insomnia over six to eight weeks, with a sleep diary, periodic reviews and help for difficult nights. It is not a medical device.</p>
         <p><strong>What it rests on:</strong> "Cognitive behavioral therapy for insomnia is the first treatment advised by European and American guidelines, before sleeping pills."</p>
         <p><strong>Category:</strong> sleep.</p>
-        <p><a href="https://pilmil-studio.github.io/sommelle/en/">Website</a> · <a href="https://github.com/Pilmil-Studio/sommelle">Source code</a> · <a href="https://github.com/Pilmil-Studio/sommelle/releases/latest">APK</a></p>
+        <p class="card-links"><a href="https://pilmil-studio.github.io/sommelle/en/">Website</a> <a href="https://github.com/Pilmil-Studio/sommelle">Source code</a> <a href="https://github.com/Pilmil-Studio/sommelle/releases/latest">APK</a></p>
       </li>
-      <li>
-        <h3>Lunaison</h3>
+      <li class="card c-lunaison">
+        <div class="card-head"><img src="../img/apps/lunaison.png" alt="" width="512" height="512" loading="lazy" decoding="async"><h3>Lunaison</h3></div>
         <p><strong>What it is for:</strong> it tracks periods, symptoms and mood, explains what happens in each phase of the cycle and estimates the next periods. It is intended for people aged 13 and over. It is not a medical device, nor a method of contraception.</p>
         <p><strong>What it rests on:</strong> "every health tip links to a published study, and when the evidence is weak, the app says so."</p>
         <p><strong>Category:</strong> health.</p>
-        <p><a href="https://pilmil-studio.github.io/lunaison/en/">Website</a> · <a href="https://github.com/Pilmil-Studio/lunaison">Source code</a> · <a href="https://github.com/Pilmil-Studio/lunaison/releases/latest">APK</a></p>
+        <p class="card-links"><a href="https://pilmil-studio.github.io/lunaison/en/">Website</a> <a href="https://github.com/Pilmil-Studio/lunaison">Source code</a> <a href="https://github.com/Pilmil-Studio/lunaison/releases/latest">APK</a></p>
       </li>
-      <li>
-        <h3>Sillon</h3>
+      <li class="card c-sillon">
+        <div class="card-head"><img src="../img/apps/sillon.png" alt="" width="512" height="512" loading="lazy" decoding="async"><h3>Sillon</h3></div>
         <p><strong>What it is for:</strong> it tells you what to do in the vegetable garden each fortnight, helps organise the plots and spots plant diseases, without any network.</p>
         <p><strong>What it rests on:</strong> "Fortnightly sowing, planting out and harvest tasks, calculated from your last frost date." (translated by the studio, not reviewed by a native speaker)</p>
         <p><strong>Category:</strong> lifestyle.</p>
-        <p><a href="https://pilmil-studio.github.io/sillon/">Website</a> · <a href="https://github.com/Pilmil-Studio/sillon">Source code</a> · <a href="https://github.com/Pilmil-Studio/sillon/releases/latest">APK</a></p>
+        <p class="card-links"><a href="https://pilmil-studio.github.io/sillon/">Website</a> <a href="https://github.com/Pilmil-Studio/sillon">Source code</a> <a href="https://github.com/Pilmil-Studio/sillon/releases/latest">APK</a></p>
       </li>
-      <li>
-        <h3>Sauve</h3>
+      <li class="card c-sauve">
+        <div class="card-head"><img src="../img/apps/sauve.png" alt="" width="512" height="512" loading="lazy" decoding="async"><h3>Sauve</h3></div>
         <p><strong>What it is for:</strong> it guides you step by step, by voice and by vibration, through cardiac arrest, choking, severe bleeding or loss of consciousness. It is a reminder guide: it does not replace first-aid training, and its instructions have not yet been validated by a trainer.</p>
         <p><strong>What it rests on:</strong> "The procedures follow the European Resuscitation Council recommendations (ERC 2021) and the French national first aid references (PSC1)."</p>
         <p><strong>Category:</strong> health.</p>
-        <p><a href="https://pilmil-studio.github.io/sauve/en/">Website</a> · <a href="https://github.com/Pilmil-Studio/sauve">Source code</a> · <a href="https://github.com/Pilmil-Studio/sauve/releases/latest">APK</a></p>
+        <p class="card-links"><a href="https://pilmil-studio.github.io/sauve/en/">Website</a> <a href="https://github.com/Pilmil-Studio/sauve">Source code</a> <a href="https://github.com/Pilmil-Studio/sauve/releases/latest">APK</a></p>
       </li>
-      <li>
-        <h3>Fredonne</h3>
+      <li class="card c-fredonne">
+        <div class="card-head"><img src="../img/apps/fredonne.png" alt="" width="512" height="512" loading="lazy" decoding="async"><h3>Fredonne</h3></div>
         <p><strong>What it is for:</strong> it lets you write a single-voice melody on a keyboard, hear it straight away, transpose it for transposing instruments and export a PDF score, offline.</p>
         <p><strong>What it rests on:</strong> "To deliver a natural sound, a readable engraving and a rigorous theoretical check without any proprietary library or heavy sample bank, the Fredonne engine rests on the scientific literature on musical acoustics and computational musicology." (translated by the studio, not reviewed by a native speaker)</p>
         <p><strong>Category:</strong> music.</p>
-        <p><a href="https://pilmil-studio.github.io/fredonne/">Website</a> · <a href="https://github.com/Pilmil-Studio/fredonne">Source code</a> · <a href="https://github.com/Pilmil-Studio/fredonne/releases/latest">APK</a></p>
+        <p class="card-links"><a href="https://pilmil-studio.github.io/fredonne/">Website</a> <a href="https://github.com/Pilmil-Studio/fredonne">Source code</a> <a href="https://github.com/Pilmil-Studio/fredonne/releases/latest">APK</a></p>
       </li>
     </ul>
+    </section>
 
-    <h2>Availability</h2>
+    <section class="sec" id="disponibilite" aria-labelledby="disponibilite-titre">
+        <h2 id="disponibilite-titre">Availability</h2>
     <div class="prose">
       <p>The apps are available as APKs, from the releases page of each GitHub repository. The iPhone versions are in development.</p>
     </div>
+    </section>
 
-    <h2>Visuals</h2>
+    <section class="sec" id="visuels" aria-labelledby="visuels-titre">
+        <h2 id="visuels-titre">Visuals</h2>
     <div class="prose">
-      <p>Studio icon: <code>img/pilmil-logo-512.png</code>. App icons in this repository: <code>img/apps/respire.png</code>, <code>img/apps/sommelle.png</code>, <code>img/apps/lunaison.png</code>, <code>img/apps/sillon.png</code>, <code>img/apps/sauve.png</code>, <code>img/apps/fredonne.png</code>. Sharing image for the website: <code>img/og-pilmil-1200x630.jpg</code>.</p>
+      <p>Icons of the studio and of the apps, in this repository. Sharing image for the website: <code>img/og-pilmil-1200x630.jpg</code>.</p>
+    </div>
+    <ul class="icons">
+        <li><img src="../img/pilmil-logo-512.png" alt="Studio icon" width="512" height="512" loading="lazy" decoding="async"><code>img/pilmil-logo-512.png</code></li>
+        <li><img src="../img/apps/respire.png" alt="Respire icon" width="512" height="512" loading="lazy" decoding="async"><code>img/apps/respire.png</code></li>
+        <li><img src="../img/apps/sommelle.png" alt="Sommelle icon" width="512" height="512" loading="lazy" decoding="async"><code>img/apps/sommelle.png</code></li>
+        <li><img src="../img/apps/lunaison.png" alt="Lunaison icon" width="512" height="512" loading="lazy" decoding="async"><code>img/apps/lunaison.png</code></li>
+        <li><img src="../img/apps/sillon.png" alt="Sillon icon" width="512" height="512" loading="lazy" decoding="async"><code>img/apps/sillon.png</code></li>
+        <li><img src="../img/apps/sauve.png" alt="Sauve icon" width="512" height="512" loading="lazy" decoding="async"><code>img/apps/sauve.png</code></li>
+        <li><img src="../img/apps/fredonne.png" alt="Fredonne icon" width="512" height="512" loading="lazy" decoding="async"><code>img/apps/fredonne.png</code></li>
+    </ul>
+    <div class="prose">
       <p>Screenshots and visuals of each app, in its repository (<a href="https://github.com/Pilmil-Studio">github.com/Pilmil-Studio</a>):</p>
-      <ul>
+      <ul class="paths">
         <li>Respire: <code>docs/marketing/captures/</code> (fr), <code>docs/marketing/captures/en/</code>.</li>
         <li>Sommelle: <code>docs/marketing/captures/fr/</code> and <code>docs/marketing/captures/en/</code>.</li>
         <li>Lunaison: <code>docs/marketing/captures/fr/</code> and <code>docs/marketing/captures/en/</code>.</li>
@@ -112,41 +144,64 @@
       </ul>
       <p>Google Play listing icon and banner: <code>fastlane/metadata/android/fr-FR/images/</code> in each repository. French sharing visual: <code>docs/marketing/out/fr/social.png</code>, for all apps except Fredonne.</p>
     </div>
+    </section>
 
-    <h2>Frequently asked questions from journalists</h2>
-    <div class="prose">
-      <h3>Why free and open source?</h3>
-      <p>The apps are free, with no advertising and no in-app purchase, and their code is published under the MPL-2.0 licence, which lets anyone read and check it. Lunaison states that everything useful in the app stays available without a subscription.</p>
-      <h3>Why work without the Internet?</h3>
-      <p>The six apps have no permission to access the Internet, so what you record stays on your phone. That absence can be checked in each app's configuration file, without having to take a promise on trust.</p>
-      <h3>What role does AI play?</h3>
-      <p>Part of the code is written with the help of an AI assistant, then reviewed, tested on real devices and maintained by the association's members. Respire, Sommelle and Lunaison include no artificial intelligence, and Sillon's photo diagnosis runs on the device as an indicative aid.</p>
-      <h3>How are the sources chosen?</h3>
-      <p>Each feature rests on a published study or on a stated design choice, and each website says which. Lunaison adds that when the evidence is weak, the app says so.</p>
-      <h3>How can I contribute or report an error?</h3>
-      <p>To report an error or suggest a need, open an issue on the app's GitHub repository or write to <a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a>. Because the code is under the MPL-2.0 licence, anyone can also read, reuse and modify it.</p>
+    <section class="sec" id="faq" aria-labelledby="faq-titre">
+        <h2 id="faq-titre">Frequently asked questions from journalists</h2>
+    <div class="faq">
+      <div>
+        <h3>Why free and open source?</h3>
+        <p>The apps are free, with no advertising and no in-app purchase, and their code is published under the MPL-2.0 licence, which lets anyone read and check it. Lunaison states that everything useful in the app stays available without a subscription.</p>
+      </div>
+      <div>
+        <h3>Why work without the Internet?</h3>
+        <p>The six apps have no permission to access the Internet, so what you record stays on your phone. That absence can be checked in each app's configuration file, without having to take a promise on trust.</p>
+      </div>
+      <div>
+        <h3>What role does AI play?</h3>
+        <p>Part of the code is written with the help of an AI assistant, then reviewed, tested on real devices and maintained by the association's members. Respire, Sommelle and Lunaison include no artificial intelligence, and Sillon's photo diagnosis runs on the device as an indicative aid.</p>
+      </div>
+      <div>
+        <h3>How are the sources chosen?</h3>
+        <p>Each feature rests on a published study or on a stated design choice, and each website says which. Lunaison adds that when the evidence is weak, the app says so.</p>
+      </div>
+      <div>
+        <h3>How can I contribute or report an error?</h3>
+        <p>To report an error or suggest a need, open an issue on the app's GitHub repository or write to <a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a>. Because the code is under the MPL-2.0 licence, anyone can also read, reuse and modify it.</p>
+      </div>
     </div>
+    </section>
 
-    <h2>Short text to quote</h2>
-    <div class="prose">
+    <section class="sec" id="citer" aria-labelledby="citer-titre">
+        <h2 id="citer-titre">Short text to quote</h2>
+    <blockquote class="quote" data-copy="Copy the text" data-done="Text copied">
       <p>Pilmil Studio is a French non-profit association (association loi 1901, registration in progress). It publishes six free, open-source Android apps under the MPL-2.0 licence: they work without an account, without trackers and without permission to access the Internet. The code is written with the help of an AI assistant, then reviewed and maintained by its members.</p>
-    </div>
+    </blockquote>
+    </section>
 
-    <h2>Contact</h2>
+    <section class="sec" id="contact" aria-labelledby="contact-titre">
+        <h2 id="contact-titre">Contact</h2>
     <div class="prose">
       <p>Write to <a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a>.</p>
     </div>
+    </section>
 
-    <h2>How they are made</h2>
+    <section class="sec" id="fabrication" aria-labelledby="fabrication-titre">
+        <h2 id="fabrication-titre">How they are made</h2>
     <div class="prose">
       <p>Pilmil Studio is a French non-profit association (loi 1901, registration in progress), and the code is written with the help of an AI assistant, then reviewed and maintained by its members.</p>
     </div>
-  </section>
+    </section>
+  </div>
 </main>
 
 <footer class="wrap foot">
-  <p>Contact: <a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a> · <a href="https://github.com/Pilmil-Studio">GitHub</a></p>
-  <p>Health and first-aid apps are informational tools. They do not replace a healthcare professional or formal first-aid training.</p>
+  <p class="foot-links"><span>Contact: <a href="mailto:pilmil.studio@proton.me">pilmil.studio@proton.me</a></span> <a href="https://github.com/Pilmil-Studio">GitHub</a></p>
+  <p class="warn">Health and first-aid apps are informational tools. They do not replace a healthcare professional or formal first-aid training.</p>
 </footer>
+<script>
+/* Bouton de copie : ajouté seulement si le navigateur sait copier ; sans lui, le texte reste sélectionnable d'un clic. */
+(function(){var q=document.querySelector('.quote');if(!q||!navigator.clipboard)return;var b=document.createElement('button');b.type='button';b.className='copy-btn';b.textContent=q.dataset.copy;b.addEventListener('click',function(){navigator.clipboard.writeText(q.querySelector('p').textContent.trim()).then(function(){b.textContent=q.dataset.done;setTimeout(function(){b.textContent=q.dataset.copy},2000)})});q.appendChild(b)})();
+</script>
 </body>
 </html>
