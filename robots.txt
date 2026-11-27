@@ -2,3 +2,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://pilmil-studio.github.io/sitemap.xml
+Sitemap: https://pilmil-studio.github.io/lunaison/sitemap.xml
+Sitemap: https://pilmil-studio.github.io/sommelle/sitemap.xml
+Sitemap: https://pilmil-studio.github.io/respire/sitemap.xml
+Sitemap: https://pilmil-studio.github.io/sillon/sitemap.xml
+Sitemap: https://pilmil-studio.github.io/fredonne/sitemap.xml
